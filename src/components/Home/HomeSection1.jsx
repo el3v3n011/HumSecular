@@ -18,7 +18,7 @@ function HomeSection1() {
         <div className="w-screen h-screen bg-[url('../../public/images/homepage/ss1.jpeg')] bg-cover bg-no-repeat bg-center ">
           <div className="flex flex-col bg-slate-50 opacity-70 h-24 justify-center items-center content-center text-2xl py-10">
             <h3>हमारा लक्ष्य</h3>
-            <p>बेहतर बिहार, विकसित बिगर</p>
+            <p>बेहतर बिहार, विकसित बिहार</p>
           </div>
         </div>
       </div>
