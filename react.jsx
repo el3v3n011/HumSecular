@@ -1,0 +1,1 @@
+import './Public/images/gr1.jpeg'

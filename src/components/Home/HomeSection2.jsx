@@ -9,7 +9,7 @@ function HomeSection2() {
 
   return (
     <>
-    <div className=" lg:bg-gray-200 lg:bg-[length:30%_100%] bg-[url('../../public/images/homepage/gr2.jpeg')] bg-cover bg-no-repeat w-screen h-screen  overflow-hidden ">
+    <div className=" lg:bg-gray-200 lg:bg-[length:30%_100%] bg-gr2 bg-cover bg-no-repeat w-screen h-screen  overflow-hidden ">
       <div className='flex flex-col lg:items-end lg:px-32 h-full lg:justify-center lg:text-2xl'>
         <div className='bg-gray-200 opacity-60 py-5  lg:w-1/2'>
           <p>

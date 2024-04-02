@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import data from '../../data/Routes'
-import logo from '../../../public/images/logo.png'
+import data from '../../data/Routes';
+import logo from '../../../public/images/logo.png';
 
 const Navbar = () => {
     const [showMenu, setShowMenu] = useState(false);
