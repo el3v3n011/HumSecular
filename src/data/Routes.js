@@ -10,7 +10,7 @@ const routes = [
     },
     {
       label: 'Gallery',
-      path: '/research',
+      path: '/gallery',
     },
     {
       label: 'Projects',

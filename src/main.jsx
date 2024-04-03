@@ -7,12 +7,17 @@ import {
 import './index.css'
 import Home from './pages/Home';
 import Main from './components/layout/Main';
+import Gallery from './pages/Gallery';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: (<Main><Home /></Main>),
   },
+  {
+    path: "/gallery",
+    element: (<Main><Gallery /></Main>)
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
