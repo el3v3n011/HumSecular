@@ -6,7 +6,7 @@ const routes = [
     },
     {
       label: 'Events',
-      path: '/resume',
+      path: '../pages/events.jsx',
     },
     {
       label: 'Gallery',

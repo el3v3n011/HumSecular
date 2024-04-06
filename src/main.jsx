@@ -8,6 +8,7 @@ import './index.css'
 import Home from './pages/Home';
 import Main from './components/layout/Main';
 import Gallery from './pages/Gallery';
+import Events from './pages/events'
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,9 @@ const router = createBrowserRouter([
   {
     path: "/gallery",
     element: (<Main><Gallery /></Main>)
+  },{
+    path:"/pages/events.jsx",
+    element: (<Main><Events /></Main>)
   }
 ]);
 

@@ -1,5 +1,6 @@
-import img1 from "../../../public/images/homepage/gr1.jpeg";
-import img2 from "../../../public/images/homepage/ss1.jpeg"
+import img1 from "../../../public/images/homepage/gr1.jpg";
+// import img2 from "../../../public/images/homepage/ss1.jpeg"
+import img2 from "../../../public/images/homepage/ss1.jpg"
 
 import img3 from "../../../public/images/homepage/poster.png";
 
