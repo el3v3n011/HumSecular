@@ -1,7 +1,6 @@
 // Events.jsx
-
-
 import axios from 'axios';
+
 
 const downloadPdf = async () => {
   try {
@@ -11,7 +10,7 @@ const downloadPdf = async () => {
       const url = window.URL.createObjectURL(new Blob([response.data]));
       const link = document.createElement('a');
       link.href = url;
-      link.setAttribute('download', 'output.pdf'); 
+      link.setAttribute('download', 'Affidavit.pdf'); 
       document.body.appendChild(link);
       link.click();
       link.parentNode.removeChild(link);
@@ -25,15 +24,44 @@ const downloadPdf = async () => {
 const Events = () => {
   return (
     <div>
-  <h1 style={{ color: 'blue' }}>Read Button</h1>
-  <p>Click the button to download the file</p>
-  <button onClick={downloadPdf} style={{ backgroundColor: 'blue', color: 'white', padding: '10px', borderRadius: '5px', border: 'none', cursor: 'pointer' }}>Download Affidavit</button>
-  </div>
+    <h1 style={{ color: 'blue' }}>Read Button</h1>
+    <p>Click the button to download the file</p>
+    <button onClick={downloadPdf} style={{ backgroundColor: 'blue', color: 'white', padding: '10px', borderRadius: '5px', border: 'none', cursor: 'pointer' }}>Download Affidavit</button>
+    </div> 
   );
 }
 
 export default Events;
 
+// const downloadPdf = async ()=>{
+//    try {
+//       await axios.get('http://localhost:3001/downloadPdf')
+//    } catch (error) {
+//       console.warn("nhi aaya");
+//    }
+// }
+
+// const downloadHandler =()=> {
+//   window.location.href = '../../public/images/Document/Affidavit-1712295411.pdf'
+// }
+
+// const Events = () => {
+//   return (
+//     <div>
+//     <h1 style={{ color: 'blue' }}>Read Button</h1>
+//     <p>Click the button to download the file</p>
+//     <button onClick={downloadPdf} style={{ backgroundColor: 'blue', color: 'white', padding: '10px', borderRadius: '5px', border: 'none', cursor: 'pointer' }}>Download Affidavit</button>
+//     </div> 
+//   );
+// }
+
+// export default Events;
+
+//   <div>
+// <h1 style={{ color: 'blue' }}>Read Button</h1>
+// <p>Click the button to download the file</p>
+// <button onClick={downloadPdf} style={{ backgroundColor: 'blue', color: 'white', padding: '10px', borderRadius: '5px', border: 'none', cursor: 'pointer' }}>Download Affidavit</button>
+// </div>   //button 2 
 
 
 // working code
@@ -54,3 +82,7 @@ export default Events;
 
 
 //export default Events;
+
+
+
+
