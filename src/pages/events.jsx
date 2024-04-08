@@ -1,19 +1,56 @@
 // Events.jsx
 
-// import React from 'react';
+
+import axios from 'axios';
+
+const downloadPdf = async () => {
+  try {
+    await axios.get('http://localhost:3001/downloadPdf', {
+      responseType: 'blob' // Set the responseType to blob
+    }).then((response) => {
+      const url = window.URL.createObjectURL(new Blob([response.data]));
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', 'output.pdf'); 
+      document.body.appendChild(link);
+      link.click();
+      link.parentNode.removeChild(link);
+    });
+  } catch (error) {
+    console.error('Error downloading PDF:', error);
+    console.warn("NHI AAYA")
+  }
+}
 
 const Events = () => {
-  const redirectToDrive = () => {
-    window.location.href = "https://drive.google.com/file/d/13Gm_BHjIl84rxEwLdDYcGcm8S1mudJGu/view?usp=drive_link";
-  };
-
   return (
     <div>
-      <h1 style={{ color: 'blue' }}>Read Button</h1>
-      <p>Click the button to download the file from Google Drive:</p>
-      <button onClick={redirectToDrive} style={{ backgroundColor: 'blue', color: 'white', padding: '10px', borderRadius: '5px', border: 'none', cursor: 'pointer' }}>Download File</button>
-    </div>
+  <h1 style={{ color: 'blue' }}>Read Button</h1>
+  <p>Click the button to download the file</p>
+  <button onClick={downloadPdf} style={{ backgroundColor: 'blue', color: 'white', padding: '10px', borderRadius: '5px', border: 'none', cursor: 'pointer' }}>Download Affidavit</button>
+  </div>
   );
-};
+}
 
 export default Events;
+
+
+
+// working code
+// const Events = () => {
+//   const redirectToDrive = () => {
+//     window.location.href = "https://drive.google.com/file/d/13Gm_BHjIl84rxEwLdDYcGcm8S1mudJGu/view?usp=drive_link";
+//   };
+
+//   return (
+//     <div>
+//       <h1 style={{ color: 'blue' }}>Read Button</h1>
+//       <p>Click the button to download the file from Google Drive:</p>
+//       <button onClick={redirectToDrive} style={{ backgroundColor: 'blue', color: 'white', padding: '10px', borderRadius: '5px', border: 'none', cursor: 'pointer' }}>Download Affidavit</button>
+//     </div>
+//   );
+// };
+
+
+
+//export default Events;
