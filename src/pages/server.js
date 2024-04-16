@@ -39,8 +39,8 @@
 // Serve static files (including the PDF)
 
 import express from "express";
-import path from "path"
-import {fileURLToPath} from 'url'
+//import path from "path"
+//import {fileURLToPath} from 'url'
 // import axios from 'axios'
 import cors from "cors"
 
@@ -55,10 +55,11 @@ app.use(express.static('public'));
 // Define a route to handle requests for the PDF file
 app.get('/downloadPdf', (req, res) => {
   console.log("hello reached")
-  const __filename = fileURLToPath(import.meta.url);
-  const __dirname = path.dirname(__filename);
-  const filePath = path.join(__dirname, '..', '..', 'public', 'images', 'Serve', 'Affidavit-1712295411.pdf');
-  res.download(filePath);
+  //const __filename = fileURLToPath(import.meta.url);
+  //const __dirname = path.dirname(__filename);
+ // const filePath = path.join(__dirname, '..', '..', 'public', 'images', 'Serve', 'Affidavit-1712295411.pdf');
+ // res.download(filePath);
+ res.send(<html><h1>Locked</h1></html>)
 });
 
 // Start the server

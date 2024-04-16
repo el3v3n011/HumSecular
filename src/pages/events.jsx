@@ -1,7 +1,6 @@
 // Events.jsx
 import axios from 'axios';
 
-
 const downloadPdf = async () => {
   try {
     await axios.get('http://localhost:3001/downloadPdf', {
@@ -26,7 +25,7 @@ const Events = () => {
     <div>
     <h1 style={{ color: 'blue' }}>Read Button</h1>
     <p>Click the button to download the file</p>
-    <button onClick={downloadPdf} style={{ backgroundColor: 'blue', color: 'white', padding: '10px', borderRadius: '5px', border: 'none', cursor: 'pointer' }}>Download Affidavit</button>
+    <button onClick={downloadPdf} className="download-button" style={{ backgroundColor: 'blue', color: 'white', padding: '10px', borderRadius: '5px', border: 'none', cursor: 'pointer' }}>Download Affidavit</button>
     </div> 
   );
 }
